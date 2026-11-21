@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eyanza Trade – إيانزا تريد | حلول متكاملة لتجهيز المطابخ التجارية</title>
+<meta name="description" content="إيانزا تريد: استيراد وتصنيع وتوريد وتجهيز معدات المطابخ التجارية للفنادق والمطاعم والكافيهات والسوبر ماركت في مصر.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+/* ===== Brand tokens: عدّل الألوان هنا لتطابق الشعار الحالي ===== */
+:root{--brand:#c8102e;--brand-d:#9e0c24;--ink:#14181f;--steel:#5b6573;--line:#e3e7ec;--bg:#fff;--soft:#f4f6f8;--dark:#0f1319;--r:14px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:Cairo,"Segoe UI",Tahoma,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin-inline:auto;padding-inline:20px}
+section{padding:72px 0}
+.soft{background:var(--soft)}
+h1,h2,h3{line-height:1.25}
+h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;margin-bottom:10px}
+.sub{color:var(--steel);max-width:680px;margin-bottom:34px}
+.btn{display:inline-block;border:0;cursor:pointer;font:inherit;font-weight:600;padding:12px 24px;border-radius:10px;background:var(--brand);color:#fff;transition:.2s}
+.btn:hover{background:var(--brand-d)}
+.btn.ghost{background:transparent;border:1.5px solid #fff}
+.btn.ghost:hover{background:#fff;color:var(--ink)}
+.btn.out{background:transparent;color:var(--ink);border:1.5px solid var(--line);padding:8px 16px;font-size:.9rem}
+.btn.out:hover{border-color:var(--brand);color:var(--brand)}
+.btn.out.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:18px;height:68px}
+.logo{font-weight:800;font-size:1.25rem;letter-spacing:.2px;margin-inline-end:auto}
+.logo b{color:var(--brand)}
+nav{display:flex;gap:18px;font-size:.95rem;font-weight:600}
+nav a:hover{color:var(--brand)}
+.lang{background:none;border:1.5px solid var(--line);border-radius:8px;padding:4px 12px;font:inherit;font-weight:600;cursor:pointer}
+.burger{display:none;background:none;border:0;font-size:1.6rem;cursor:pointer}
+/* hero */
+.hero{background:linear-gradient(135deg,rgba(15,19,25,.94),rgba(15,19,25,.78)),repeating-linear-gradient(45deg,#1b222c 0 14px,#161c25 14px 28px);color:#fff;padding:110px 0 96px}
+.hero h1{font-size:clamp(2rem,5vw,3.4rem);font-weight:800;max-width:760px}
+.hero p{max-width:640px;margin:18px 0 30px;color:#d5dae1;font-size:1.1rem}
+.hero .btn+.btn{margin-inline-start:10px}
+.stats{display:flex;gap:34px;flex-wrap:wrap;margin-top:50px;color:#c5ccd6;font-size:.95rem}
+.stats b{display:block;color:#fff;font-size:1.05rem}
+/* grids */
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px;transition:.2s}
+.card:hover{box-shadow:0 10px 28px rgba(20,24,31,.09);transform:translateY(-2px)}
+.ic{width:46px;height:46px;border-radius:12px;background:#fdecef;color:var(--brand);display:grid;place-items:center;font-size:1.4rem;margin-bottom:14px}
+.card h3{font-size:1.1rem;margin-bottom:6px}
+.card p{color:var(--steel);font-size:.95rem}
+.card .btn{margin-top:14px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+/* manufacturing */
+.split{display:grid;gap:40px;grid-template-columns:1fr 1fr;align-items:center}
+.list{list-style:none;padding:0}
+.list li{padding:10px 0;border-bottom:1px solid var(--line);display:flex;gap:10px}
+.list li::before{content:"✓";color:var(--brand);font-weight:800}
+.panel{background:var(--dark);color:#fff;border-radius:var(--r);padding:36px}
+.panel p{color:#c5ccd6}
+.steps{counter-reset:s;display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-top:10px}
+.steps div{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px;counter-increment:s;font-weight:600}
+.steps div::before{content:counter(s);display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--brand);color:#fff;margin-bottom:8px;font-size:.9rem}
+/* form */
+.formbox{display:grid;gap:36px;grid-template-columns:1.2fr .8fr}
+form{display:grid;gap:14px}
+label{font-weight:600;font-size:.92rem;display:grid;gap:4px}
+input,select,textarea{font:inherit;padding:11px 13px;border:1.5px solid var(--line);border-radius:10px;background:#fff;width:100%}
+input:focus,select:focus,textarea:focus{border-color:var(--brand);outline:0}
+.row{display:grid;gap:14px;grid-template-columns:1fr 1fr}
+.err{color:var(--brand);font-size:.85rem;min-height:1.1em}
+.basket{background:var(--soft);border-radius:var(--r);padding:22px;align-self:start}
+.basket ul{list-style:none;padding:0;margin:10px 0}
+.basket li{display:flex;justify-content:space-between;gap:8px;padding:8px 0;border-bottom:1px solid var(--line)}
+.basket li button{background:none;border:0;color:var(--brand);cursor:pointer;font-size:1.1rem}
+.empty{color:var(--steel);font-size:.92rem}
+.ok{background:#e8f6ee;border:1px solid #9bd3b2;border-radius:var(--r);padding:20px;display:none}
+.ok.show{display:block}
+footer{background:var(--dark);color:#aeb6c2;padding:40px 0;font-size:.92rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
+.fab{position:fixed;inset-block-end:18px;inset-inline-start:18px;z-index:30;background:var(--brand);color:#fff;border-radius:999px;padding:12px 20px;font-weight:700;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+@media(max-width:860px){
+ nav{display:none;position:absolute;top:68px;inset-inline:0;background:#fff;flex-direction:column;padding:16px 20px;border-bottom:1px solid var(--line)}
+ nav.open{display:flex}.burger{display:block}
+ .split,.formbox,.row{grid-template-columns:1fr}
+ section{padding:52px 0}.hero{padding:70px 0}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap nav">
+  <a class="logo" href="#top">Eyanza <b>Trade</b></a>
+  <nav id="nav">
+   <a href="#sectors" data-ar="القطاعات" data-en="Industries"></a>
+   <a href="#products" data-ar="المنتجات" data-en="Products"></a>
+   <a href="#manufacturing" data-ar="التصنيع" data-en="Manufacturing"></a>
+   <a href="#services" data-ar="الخدمات" data-en="Services"></a>
+   <a href="#quote" data-ar="اتصل بنا" data-en="Contact"></a>
+  </nav>
+  <a class="btn" href="#quote" data-ar="اطلب عرض سعر" data-en="Request a Quote"></a>
+  <button class="lang" id="lang" aria-label="Language">EN</button>
+  <button class="burger" id="burger" aria-label="Menu">☰</button>
+ </div>
+</header>
+
+<main id="top">
+<section class="hero">
+ <div class="wrap">
+  <h1 data-ar="نجهز مطبخك التجاري من الفكرة إلى التشغيل" data-en="We equip your commercial kitchen, from concept to operation"></h1>
+  <p data-ar="تقدم Eyanza Trade حلولًا متكاملة لتجهيز المطابخ التجارية، من خلال الاستيراد والتصنيع المحلي وتوريد المعدات وتصميم وتنفيذ المشروعات، لتلبية احتياجات الفنادق والمطاعم والكافيهات والسوبر ماركت والمنشآت الكبرى." data-en="Eyanza Trade delivers complete commercial kitchen solutions through import, local manufacturing, equipment supply and project design and execution, serving hotels, restaurants, cafés, supermarkets and large facilities."></p>
+  <a class="btn" href="#products" data-ar="استعرض المنتجات" data-en="Browse Products"></a>
+  <a class="btn ghost" href="#quote" data-ar="اطلب عرض سعر" data-en="Request a Quote"></a>
+  <div class="stats">
+   <div><b data-ar="استيراد وتوريد" data-en="Import & Supply"></b><span data-ar="معدات مطابخ تجارية" data-en="Commercial kitchen equipment"></span></div>
+   <div><b data-ar="تصنيع محلي" data-en="Local Manufacturing"></b><span data-ar="ستانلس ستيل حسب الطلب" data-en="Custom stainless steel"></span></div>
+   <div><b data-ar="تركيب وصيانة" data-en="Install & Service"></b><span data-ar="دعم ما بعد البيع" data-en="After-sales support"></span></div>
+  </div>
+ </div>
+</section>
+
+<section id="sectors">
+ <div class="wrap">
+  <h2 data-ar="القطاعات التي نخدمها" data-en="Industries We Serve"></h2>
+  <p class="sub" data-ar="حلول مصممة وفق احتياجات كل قطاع. اختر قطاعك لنوجّهك إلى المعدات الأنسب." data-en="Solutions shaped around each sector's needs. Pick yours and we'll point you to the right equipment."></p>
+  <div class="grid">
+   <div class="card"><div class="ic">🏨</div><h3 data-ar="الفنادق" data-en="Hotels"></h3><p data-ar="مطابخ رئيسية وخدمات الغرف والبوفيهات." data-en="Main kitchens, room service and buffets."></p><a class="btn out" href="#quote" data-sector="hotels" data-ar="اطلب عرضًا لهذا القطاع" data-en="Quote for this sector"></a></div>
+   <div class="card"><div class="ic">🍽️</div><h3 data-ar="المطاعم" data-en="Restaurants"></h3><p data-ar="خطوط إنتاج وتجهيز وتبريد لمطابخ المطاعم." data-en="Cooking lines, prep and refrigeration."></p><a class="btn out" href="#quote" data-sector="restaurants" data-ar="اطلب عرضًا لهذا القطاع" data-en="Quote for this sector"></a></div>
+   <div class="card"><div class="ic">☕</div><h3 data-ar="الكافيهات" data-en="Cafés"></h3><p data-ar="كاونترات ومعدات تجهيز المشروبات والمخبوزات." data-en="Counters, beverage and pastry equipment."></p><a class="btn out" href="#quote" data-sector="cafes" data-ar="اطلب عرضًا لهذا القطاع" data-en="Quote for this sector"></a></div>
+   <div class="card"><div class="ic">🥘</div><h3 data-ar="شركات ومطابخ التموين" data-en="Catering Companies"></h3><p data-ar="معدات إنتاج بكميات كبيرة." data-en="High-volume production equipment."></p><a class="btn out" href="#quote" data-sector="catering" data-ar="اطلب عرضًا لهذا القطاع" data-en="Quote for this sector"></a></div>
+   <div class="card"><div class="ic">🏥</div><h3 data-ar="المستشفيات والمنشآت الكبرى" data-en="Hospitals & Large Facilities"></h3><p data-ar="مطابخ مؤسسية بمعايير تشغيل عالية." data-en="Institutional kitchens with high operating standards."></p><a class="btn out" href="#quote" data-sector="hospitals" data-ar="اطلب عرضًا لهذا القطاع" data-en="Quote for this sector"></a></div>
+   <div class="card"><div class="ic">🛒</div><h3 data-ar="السوبر ماركت" data-en="Supermarkets"></h3><p data-ar="تبريد وعرض وأقسام تجهيز الأغذية." data-en="Refrigeration, display and food-prep departments."></p><a class="btn out" href="#quote" data-sector="supermarkets" data-ar="اطلب عرضًا لهذا القطاع" data-en="Quote for this sector"></a></div>
+  </div>
+ </div>
+</section>
+
+<section id="products" class="soft">
+ <div class="wrap">
+  <h2 data-ar="فئات المنتجات" data-en="Product Categories"></h2>
+  <p class="sub" data-ar="أضف الفئات التي تحتاجها إلى قائمة الطلب، ثم أرسلها كطلب عرض سعر واحد." data-en="Add the categories you need to your quote list, then send them as a single request."></p>
+  <div class="grid" id="cats"></div>
+ </div>
+</section>
+
+<section id="why">
+ <div class="wrap">
+  <h2 data-ar="لماذا Eyanza Trade؟" data-en="Why Eyanza Trade?"></h2>
+  <div class="grid" style="margin-top:26px">
+   <div class="card"><div class="ic">🚢</div><h3 data-ar="الاستيراد والتوريد" data-en="Import & Supply"></h3></div>
+   <div class="card"><div class="ic">🏭</div><h3 data-ar="التصنيع المحلي المتكامل" data-en="Integrated Local Manufacturing"></h3></div>
+   <div class="card"><div class="ic">📐</div><h3 data-ar="حلول متكاملة للمشروعات" data-en="Turnkey Project Solutions"></h3></div>
+   <div class="card"><div class="ic">🛠️</div><h3 data-ar="التصنيع حسب الطلب" data-en="Made-to-Order Fabrication"></h3></div>
+   <div class="card"><div class="ic">⚙️</div><h3 data-ar="التركيب والتشغيل" data-en="Installation & Commissioning"></h3></div>
+   <div class="card"><div class="ic">🔧</div><h3 data-ar="الصيانة وما بعد البيع" data-en="Maintenance & After-Sales"></h3></div>
+  </div>
+ </div>
+</section>
+
+<section id="manufacturing" class="soft">
+ <div class="wrap split">
+  <div>
+   <h2 data-ar="التصنيع المحلي" data-en="Local Manufacturing"></h2>
+   <p class="sub" data-ar="نصنّع معدات المطابخ التجارية محليًا بما يناسب مساحة مشروعك واحتياجات التشغيل." data-en="We manufacture commercial kitchen equipment locally, fitted to your space and operating needs."></p>
+   <ul class="list">
+    <li data-ar="معدات ستانلس ستيل حسب المقاس والتصميم" data-en="Stainless steel equipment made to your size and design"></li>
+    <li data-ar="مرونة في التعديل وفق متطلبات المشروع" data-en="Flexibility to adapt to project requirements"></li>
+    <li data-ar="تنسيق كامل بين التصنيع والتوريد والتركيب" data-en="Full coordination between fabrication, supply and installation"></li>
+   </ul>
+  </div>
+  <div class="panel"><h3 data-ar="لديك تصميم أو مخطط؟" data-en="Have a design or layout?"></h3><p style="margin:10px 0 18px" data-ar="أرسل المخطط أو وصف الاحتياج وسنعود إليك بعرض مناسب." data-en="Send your layout or a description of your needs and we'll come back with a suitable offer."></p><a class="btn" href="#quote" data-ar="اطلب عرض سعر" data-en="Request a Quote"></a></div>
+ </div>
+</section>
+
+<section id="services">
+ <div class="wrap">
+  <h2 data-ar="خدماتنا: رحلة المشروع" data-en="Our Services: The Project Journey"></h2>
+  <div class="steps">
+   <div data-ar="دراسة احتياجات المشروع" data-en="Needs assessment"></div>
+   <div data-ar="تصميم وتخطيط المطبخ" data-en="Kitchen design & layout"></div>
+   <div data-ar="التصنيع أو الاستيراد" data-en="Manufacture or import"></div>
+   <div data-ar="التركيب والتشغيل" data-en="Installation & start-up"></div>
+   <div data-ar="الصيانة وما بعد البيع" data-en="Maintenance & after-sales"></div>
+  </div>
+ </div>
+</section>
+
+<section id="quote" class="soft">
+ <div class="wrap">
+  <h2 data-ar="طلب عرض سعر" data-en="Request a Quote"></h2>
+  <p class="sub" data-ar="أرسل بياناتك وقائمة المعدات المطلوبة وسيتواصل معك فريقنا." data-en="Send your details and equipment list and our team will get back to you."></p>
+  <div class="formbox">
+   <div>
+    <form id="rfq" novalidate>
+     <div class="row">
+      <label><span data-ar="الاسم" data-en="Name"></span><input name="name" required autocomplete="name"><span class="err" data-f="name"></span></label>
+      <label><span data-ar="الشركة" data-en="Company"></span><input name="company" autocomplete="organization"></label>
+     </div>
+     <div class="row">
+      <label><span data-ar="رقم الهاتف / واتساب" data-en="Phone / WhatsApp"></span><input name="phone" type="tel" required autocomplete="tel"><span class="err" data-f="phone"></span></label>
+      <label><span data-ar="البريد الإلكتروني" data-en="Email"></span><input name="email" type="email" autocomplete="email"><span class="err" data-f="email"></span></label>
+     </div>
+     <label><span data-ar="القطاع" data-en="Sector"></span>
+      <select name="sector" id="sector">
+       <option value="" data-ar="اختر القطاع" data-en="Select sector"></option>
+       <option value="hotels" data-ar="الفنادق" data-en="Hotels"></option>
+       <option value="restaurants" data-ar="المطاعم" data-en="Restaurants"></option>
+       <option value="cafes" data-ar="الكافيهات" data-en="Cafés"></option>
+       <option value="catering" data-ar="شركات التموين" data-en="Catering"></option>
+       <option value="hospitals" data-ar="المستشفيات والمنشآت الكبرى" data-en="Hospitals & large facilities"></option>
+       <option value="supermarkets" data-ar="السوبر ماركت" data-en="Supermarkets"></option>
+      </select></label>
+     <label><span data-ar="تفاصيل المشروع" data-en="Project details"></span><textarea name="msg" rows="4"></textarea></label>
+     <button class="btn" type="submit" id="send" data-ar="إرسال الطلب" data-en="Submit Request"></button>
+    </form>
+    <div class="ok" id="ok" role="status"></div>
+   </div>
+   <aside class="basket">
+    <h3 data-ar="قائمة الطلب" data-en="Your Quote List"></h3>
+    <ul id="basket"></ul>
+    <p class="empty" id="empty" data-ar="لم تضف أي فئات بعد." data-en="No categories added yet."></p>
+   </aside>
+  </div>
+ </div>
+</section>
+</main>
+
+<a class="fab" href="#quote" id="fab" hidden></a>
+<footer><div class="wrap"><div>© <span id="yr"></span> Eyanza Trade – إيانزا تريد</div><div>www.eyanzatade.com</div></div></footer>
+
+<script>
+/* ===== إعدادات التواصل: أضف رقم واتساب (دولي بدون +) وبريد الاستقبال ===== */
+const CONFIG={whatsapp:"",email:""};
+const CATS=[
+ {id:"cooking",i:"🔥",ar:["معدات الطهي","أفران وغلايات وشوايات ومواقد."],en:["Cooking Equipment","Ovens, boilers, grills and ranges."]},
+ {id:"cold",i:"❄️",ar:["التبريد والتجميد","ثلاجات وفريزرات وغرف تبريد."],en:["Refrigeration & Freezing","Fridges, freezers and cold rooms."]},
+ {id:"steel",i:"🔩",ar:["ستانلس ستيل حسب الطلب","طاولات وأحواض ورفوف مصنّعة بالمقاس."],en:["Custom Stainless Steel","Tables, sinks and shelving made to size."]},
+ {id:"wash",i:"🧼",ar:["غسيل الأطباق","ماكينات وأحواض غسيل مهنية."],en:["Dishwashing","Professional machines and sinks."]},
+ {id:"prep",i:"🔪",ar:["تجهيز الطعام","خلاطات وقطاعات وعجانات."],en:["Food Preparation","Mixers, slicers and kneaders."]},
+ {id:"hood",i:"🌀",ar:["الشفاطات والتهوية","هوود وأنظمة شفط وتهوية."],en:["Hoods & Ventilation","Extraction hoods and ventilation."]},
+ {id:"bakery",i:"🥖",ar:["المخابز والحلويات","معدات تجهيز وخَبز."],en:["Bakery & Pastry","Prep and baking equipment."]},
+ {id:"super",i:"🛍️",ar:["معدات السوبر ماركت","ثلاجات عرض وأقسام تجهيز."],en:["Supermarket Equipment","Display fridges and prep departments."]}
+];
+let lang=localStorage.getItem?.("ey_lang")||"ar",basket=[];
+try{lang=localStorage.getItem("ey_lang")||"ar";basket=JSON.parse(localStorage.getItem("ey_basket")||"[]")}catch(e){}
+const $=s=>document.querySelector(s),t=c=>c[lang==="ar"?"ar":"en"];
+function save(){try{localStorage.setItem("ey_basket",JSON.stringify(basket));localStorage.setItem("ey_lang",lang)}catch(e){}}
+function esc(s){const d=document.createElement("div");d.textContent=s;return d.innerHTML}
+function renderCats(){
+ $("#cats").innerHTML=CATS.map(c=>{const on=basket.includes(c.id),x=t(c);
+  return `<div class="card"><div class="ic">${c.i}</div><h3>${x[0]}</h3><p>${x[1]}</p><button class="btn out${on?" on":""}" data-add="${c.id}">${on?(lang==="ar"?"✓ في القائمة":"✓ Added"):(lang==="ar"?"أضف لقائمة الطلب":"Add to quote")}</button></div>`}).join("");
+}
+function renderBasket(){
+ $("#basket").innerHTML=basket.map(id=>{const c=CATS.find(k=>k.id===id);return c?`<li><span>${c.i} ${t(c)[0]}</span><button data-rm="${id}" aria-label="remove">✕</button></li>`:""}).join("");
+ $("#empty").style.display=basket.length?"none":"block";
+ const f=$("#fab");f.hidden=!basket.length;f.textContent=(lang==="ar"?"📋 قائمة الطلب (":"📋 Quote list (")+basket.length+")";
+}
+function applyLang(){
+ document.documentElement.lang=lang;document.documentElement.dir=lang==="ar"?"rtl":"ltr";
+ document.querySelectorAll("[data-ar]").forEach(e=>e.textContent=e.dataset[lang]);
+ $("#lang").textContent=lang==="ar"?"EN":"عربي";
+ renderCats();renderBasket();save();
+}
+document.addEventListener("click",e=>{
+ const a=e.target.closest("[data-add]"),r=e.target.closest("[data-rm]"),s=e.target.closest("[data-sector]");
+ if(a){const id=a.dataset.add;basket=basket.includes(id)?basket.filter(x=>x!==id):[...basket,id];renderCats();renderBasket();save()}
+ if(r){basket=basket.filter(x=>x!==r.dataset.rm);renderCats();renderBasket();save()}
+ if(s)$("#sector").value=s.dataset.sector;
+ if(e.target.closest("nav a"))$("#nav").classList.remove("open");
+});
+$("#lang").onclick=()=>{lang=lang==="ar"?"en":"ar";applyLang()};
+$("#burger").onclick=()=>$("#nav").classList.toggle("open");
+$("#yr").textContent=new Date().getFullYear();
+
+$("#rfq").addEventListener("submit",e=>{
+ e.preventDefault();
+ const f=e.target,d=Object.fromEntries(new FormData(f)),errs={};
+ const m=lang==="ar"?{r:"هذا الحقل مطلوب",p:"رقم هاتف غير صحيح",m:"بريد غير صحيح"}:{r:"Required",p:"Invalid phone",m:"Invalid email"};
+ if(!d.name.trim())errs.name=m.r;
+ if(!d.phone.trim())errs.phone=m.r;else if(!/^[+\d\s()-]{7,20}$/.test(d.phone.trim()))errs.phone=m.p;
+ if(d.email&&!/^\S+@\S+\.\S+$/.test(d.email.trim()))errs.email=m.m;
+ document.querySelectorAll(".err").forEach(x=>x.textContent=errs[x.dataset.f]||"");
+ if(Object.keys(errs).length)return;
+ const ref="EY-"+Date.now().toString(36).toUpperCase();
+ const items=basket.map(id=>t(CATS.find(c=>c.id===id))[0]).join("، ");
+ const sec=$("#sector").selectedOptions[0]?.textContent||"";
+ const text=`Eyanza Trade RFQ ${ref}\nName: ${d.name}\nCompany: ${d.company}\nPhone: ${d.phone}\nEmail: ${d.email}\nSector: ${sec}\nItems: ${items||"-"}\nDetails: ${d.msg}`;
+ const ok=$("#ok");
+ ok.innerHTML=`<b>${lang==="ar"?"تم تجهيز طلبك. الرقم المرجعي:":"Your request is ready. Reference:"} ${esc(ref)}</b><p>${lang==="ar"?"سيتواصل معك فريقنا قريبًا.":"Our team will contact you shortly."}</p>`;
+ ok.classList.add("show");
+ if(CONFIG.whatsapp)window.open("https://wa.me/"+CONFIG.whatsapp+"?text="+encodeURIComponent(text),"_blank");
+ else if(CONFIG.email)location.href="mailto:"+CONFIG.email+"?subject="+encodeURIComponent("RFQ "+ref)+"&body="+encodeURIComponent(text);
+ f.reset();basket=[];renderCats();renderBasket();save();
+});
+applyLang();
+</script>
+</body>
+</html>
